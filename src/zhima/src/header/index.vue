@@ -54,7 +54,7 @@
               </auto-complete>
             </div>
             <div class="row"
-              :style="{'--width_col':`${popCol1}`,'height':`${popoHeight-40}px`}">
+              :style="{'--width_col':`${popCol1}`,'height':`${popoHeight-60}px`}">
               <div class="col" v-for="key in Object.keys(list)" :key="key" style="height:280px">
                 <span style="font-weight:bold;font-size:14px;color:#2d8cf0">&ensp;· {{key}}</span>
                 <div class="link-top" style="padding:5px 0"></div>
@@ -1106,7 +1106,7 @@ export default {
     width:var(--width1);
     height: var(--height);
     padding: 1.25rem !important;
-    overflow-y:auto;
+    // overflow-y:auto;
     filter: drop-shadow(0px 2px 8px rgba(198, 198, 198, 0.5));
     /* box-shadow: 0px 2px 8px 0px rgba(198, 198, 198, 0.5); */
   }
@@ -1119,8 +1119,8 @@ export default {
     position: relative;
     width: var(--width2);
     height: var(--height);
-    padding: 1.25rem !important;
-    overflow-y:auto;
+    padding: 1.25rem 1rem !important;
+    // overflow-y:auto;
     filter: drop-shadow(0px 2px 8px rgba(198, 198, 198, 0.5));
     /* box-shadow: 0px 2px 8px 0px rgba(198, 198, 198, 0.5); */
   }
