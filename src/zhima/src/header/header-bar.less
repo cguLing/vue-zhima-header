@@ -1,0 +1,95 @@
+.header-bar{
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+  }
+  
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.15);
+    transition: color 0.2s ease;
+  }
+  width: 100%;
+  height: 40px;
+  background-color: #000;//#1e1e28;//#183054;
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+  .custom-content-con{
+    float: right;
+    height: auto;
+    line-height: 40px;
+    & > *{
+      float: right;
+    }
+  }
+  .project {
+    display: inline-block;
+    height: 100%;
+    line-height: 40px;
+    margin-left: -5px;
+    position: absolute;
+    // width: 100%;
+    & .project-list {
+      // font: 12px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+      font-size:14px;
+      padding: 2px 5px 6px;
+      font-weight: 600;
+      color:#fff;
+    }
+    & .project-list:hover {
+      color:rgb(77, 255, 240);
+    }
+  }
+  & .sidebar-logo-link {
+    height: 100%;
+    width: 100%;
+
+    & .sidebar-logo {
+      width: 35px;
+      height: 35px;
+      // vertical-align: middle;
+      // margin: -26px 5px 0 5px;
+    }
+    & .sidebar-title {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0px 0 0 2px;
+      color: rgb(255, 255, 255);
+      // font: 14px/1.6 Helvetica Neue,Helvetica,Tahoma,Arial,Microsoft YaHei,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+      // font: 12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;
+      // font-family: Helvetica,'宋体', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+      font-weight: 600;
+      line-height: 40px;
+      font-size: 18px;
+      // font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+      // vertical-align: middle;
+      // margin-right: 10px;
+      & .sidebar-name1 {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        margin: -7px 0px 0 0px;
+      }
+      & .sidebar-name2 {
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        margin: -7px -2px 0 0px;
+      }
+    }
+  }
+
+  &.collapse {
+    .sidebar-logo {
+      margin-right: 0px;
+    }
+  }
+}
