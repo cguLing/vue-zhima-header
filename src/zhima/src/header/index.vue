@@ -103,787 +103,15 @@ import AutoComplete from '@/components/autoComplete.vue'
 export default {
   name: 'zhimaHeader',
   props:{
-    serviceList: {
+    propList: {
       type: Array,
       // required: true,
-      default: () => { return     [
-    {
-        "id": 2,
-        "name": "VPN",
-        "url": "https://rainbow-bridge.site.youdao.com/subapp/vpn/",
-        "status": 1,
-        "desc": "彩虹桥VPN系统",
-        "menu_id": 2,
-        "menu": "vpn",
-        "class_id": 6,
-        "class_name": "权限与安全",
-        "popo": "2514203",
-        "doc": "https://rainbow-bridge.corp.youdao.com/doc/"
+      default: () => { return [] }
     },
-    {
-        "id": 9,
-        "name": "Matrix",
-        "url": "https://matrix.corp.youdao.com",
-        "status": 0,
-        "desc": "运维后台服务",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 1,
-        "class_name": "基础设施",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 10,
-        "name": "Rancher",
-        "url": "https://rancher.corp.youdao.com",
-        "status": 0,
-        "desc": "容器云管理平台（旧）",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 1,
-        "class_name": "基础设施",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 11,
-        "name": "KubeSphere",
-        "url": "https://kubesphere.corp.youdao.com/dashboard",
-        "status": 0,
-        "desc": "容器云管理平台（新）",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 1,
-        "class_name": "基础设施",
-        "popo": "",
-        "doc": "https://confluence.inner.youdao.com/display/maintain/KubeSphere"
-    },
-    {
-        "id": 12,
-        "name": "大禹devops",
-        "url": "https://dayu.inner.youdao.com",
-        "status": 0,
-        "desc": "有道大禹",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 2,
-        "class_name": "自动化与CI",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 13,
-        "name": "堡垒机",
-        "url": "https://teleport.corp.youdao.com",
-        "status": 0,
-        "desc": "用于员工登录服务器",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 6,
-        "class_name": "权限与安全",
-        "popo": "2567768",
-        "doc": "https://confluence.inner.youdao.com/pages/viewpage.action?pageId=121906820"
-    },
-    {
-        "id": 14,
-        "name": "工单系统",
-        "url": "https://ticket.site.youdao.com",
-        "status": 0,
-        "desc": "工单系统",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 5,
-        "class_name": "运维服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 16,
-        "name": "es实例开通",
-        "url": "https://rms.corp.youdao.com/",
-        "status": 0,
-        "desc": "目前支持开通测试环境es",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 7,
-        "class_name": "资源与业务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 17,
-        "name": "邮件组管理系统",
-        "url": "https://mailgroup.corp.youdao.com",
-        "status": 0,
-        "desc": "邮件组/有道统一账号中心 管理系统",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 6,
-        "class_name": "权限与安全",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 18,
-        "name": "统一账号密码重置系统",
-        "url": "http://password.corp.youdao.com/",
-        "status": 0,
-        "desc": "有道统一账号重置",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 6,
-        "class_name": "权限与安全",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 19,
-        "name": "CMDB",
-        "url": "https://cmdb.corp.youdao.com/",
-        "status": 0,
-        "desc": "CMDB平台",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 2,
-        "class_name": "自动化与CI",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 20,
-        "name": "组织架构/成本中心",
-        "url": "https://ydkeystone.site.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 7,
-        "class_name": "资源与业务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 21,
-        "name": "运维工具系统",
-        "url": "https://ops.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 5,
-        "class_name": "运维服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 22,
-        "name": "Tellus平台",
-        "url": "https://tellus-console.corp.youdao.com/",
-        "status": 0,
-        "desc": "自动告警服务",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 5,
-        "class_name": "运维服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 23,
-        "name": "指令即服务",
-        "url": "https://caas.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 1,
-        "class_name": "基础设施",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 24,
-        "name": "chatops平台",
-        "url": "https://chatops.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 7,
-        "class_name": "资源与业务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 25,
-        "name": "IT盘点系统",
-        "url": "https://trackapp-test.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 1,
-        "class_name": "基础设施",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 26,
-        "name": "SSO单点登录",
-        "url": "https://sso-admin.site.youdao.com/",
-        "status": 0,
-        "desc": "单点登录接入管理",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 6,
-        "class_name": "权限与安全",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 27,
-        "name": "有道 CI",
-        "url": "http://ydci.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 2,
-        "class_name": "自动化与CI",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 28,
-        "name": "Kafka管理平台",
-        "url": "https://kafka-manager.site.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 5,
-        "class_name": "运维服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 29,
-        "name": "有道云平台",
-        "url": "https://cloud.site.youdao.com/",
-        "status": 0,
-        "desc": "云服务实例资源申请",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 7,
-        "class_name": "资源与业务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 30,
-        "name": "故障/证书管理",
-        "url": "https://maintain-reporter.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 6,
-        "class_name": "权限与安全",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 31,
-        "name": "临时文件共享",
-        "url": "http://transfer.inner.youdao.com/",
-        "status": 0,
-        "desc": "方便快捷的文件安全分享",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 5,
-        "class_name": "运维服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 32,
-        "name": "DNS管理系统",
-        "url": "https://matrix.corp.youdao.com/dashboard?mod=dns",
-        "status": 0,
-        "desc": "有道DNS管理系统",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 5,
-        "class_name": "运维服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 33,
-        "name": "负载均衡",
-        "url": "https://matrix.corp.youdao.com/dashboard?mod=nginx",
-        "status": 0,
-        "desc": "Nginx管理系统",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 5,
-        "class_name": "运维服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 34,
-        "name": "数据库管理平台",
-        "url": "https://matrix.corp.youdao.com/?mod=%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0",
-        "status": 0,
-        "desc": "数据库管理类",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 3,
-        "class_name": "数据库与存储",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 35,
-        "name": "测试家园",
-        "url": "https://testerhome.inner.youdao.com/",
-        "status": 0,
-        "desc": "公共",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 8,
-        "class_name": "测试服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 36,
-        "name": "接口diff测试平台",
-        "url": "http://difftest.inner.youdao.com/",
-        "status": 0,
-        "desc": "公共",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 8,
-        "class_name": "测试服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 37,
-        "name": "流程中心",
-        "url": "http://workflow.inner.youdao.com/",
-        "status": 0,
-        "desc": "公共",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 8,
-        "class_name": "测试服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 38,
-        "name": "反馈平台",
-        "url": "http://feedback.inner.youdao.com/",
-        "status": 0,
-        "desc": "公共",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 8,
-        "class_name": "测试服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 39,
-        "name": "质量中心",
-        "url": "http://quality.inner.youdao.com/",
-        "status": 0,
-        "desc": "公共",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 8,
-        "class_name": "测试服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 40,
-        "name": "持续集成平台",
-        "url": "http://ci.corp.youdao.com/jenkins",
-        "status": 0,
-        "desc": "公共",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 2,
-        "class_name": "自动化与CI",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 41,
-        "name": "借手机平台",
-        "url": "https://jieshouji.corp.youdao.com/",
-        "status": 0,
-        "desc": "公共",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 8,
-        "class_name": "测试服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 42,
-        "name": "测试报告系统",
-        "url": "http://testmng.corp.youdao.com/",
-        "status": 0,
-        "desc": "公共",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 8,
-        "class_name": "测试服务",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 43,
-        "name": "智能硬件测试平台",
-        "url": "https://hwp.inner.youdao.com/",
-        "status": 0,
-        "desc": "智能硬件",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 9,
-        "class_name": "测试工具",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 44,
-        "name": "广告tracking工具",
-        "url": "http://tracking-test.inner.youdao.com/",
-        "status": 0,
-        "desc": "广告",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 4,
-        "class_name": "数据与监控",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 45,
-        "name": "新测试工具管理平台",
-        "url": "http://lunatools.inner.youdao.com/",
-        "status": 0,
-        "desc": "词典",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 9,
-        "class_name": "测试工具",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 46,
-        "name": "性能管理平台",
-        "url": "http://kemd.inner.youdao.com/",
-        "status": 0,
-        "desc": "精品课",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 10,
-        "class_name": "质量评估与报告",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 47,
-        "name": "质量管理平台－少儿英语",
-        "url": "http://kidsqms.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 10,
-        "class_name": "质量评估与报告",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 48,
-        "name": "质量管理平台－优课",
-        "url": "http://youcqms.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 10,
-        "class_name": "质量评估与报告",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 49,
-        "name": "接口性能测试平台",
-        "url": "http://pt.inner.youdao.com/",
-        "status": 0,
-        "desc": "AI",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 9,
-        "class_name": "测试工具",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 50,
-        "name": "日常监控/测试报告收集平台",
-        "url": "http://allure.inner.youdao.com/",
-        "status": 0,
-        "desc": "AI",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 10,
-        "class_name": "质量评估与报告",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 51,
-        "name": "新性能测试工具",
-        "url": "https://performance-test.site.youdao.com/",
-        "status": 0,
-        "desc": "AI",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 9,
-        "class_name": "测试工具",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 52,
-        "name": "测试工具平台",
-        "url": "http://galaxy.inner.youdao.com/",
-        "status": 0,
-        "desc": "少儿阅读",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 9,
-        "class_name": "测试工具",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 53,
-        "name": "接口监控平台",
-        "url": "http://servermonitor.inner.youdao.com/",
-        "status": 0,
-        "desc": "词典",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 4,
-        "class_name": "数据与监控",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 54,
-        "name": "线上质量监控",
-        "url": "http://aimonitor.corp.youdao.com/",
-        "status": 0,
-        "desc": "AI",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 4,
-        "class_name": "数据与监控",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 55,
-        "name": "质量管理平台-广告",
-        "url": "http://sebastian.inner.youdao.com/",
-        "status": 0,
-        "desc": "",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 10,
-        "class_name": "质量评估与报告",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 56,
-        "name": "工具平台",
-        "url": "http://ketools.inner.youdao.com/",
-        "status": 0,
-        "desc": "精品课",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 9,
-        "class_name": "测试工具",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 57,
-        "name": "翻译性能自动化平台",
-        "url": "http://ct.corp.youdao.com/",
-        "status": 0,
-        "desc": "AI",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 2,
-        "class_name": "自动化与CI",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 58,
-        "name": "评测系统",
-        "url": "http://aieval.youdao.com/asr/dashboard",
-        "status": 0,
-        "desc": "AI",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 9,
-        "class_name": "测试工具",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 59,
-        "name": "质量评估系统",
-        "url": "http://evanew.corp.youdao.com/index.j",
-        "status": 0,
-        "desc": "词典",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 10,
-        "class_name": "质量评估与报告",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 60,
-        "name": "测试工具",
-        "url": "http://testtool.inner.youdao.com/",
-        "status": 0,
-        "desc": "词典",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 9,
-        "class_name": "测试工具",
-        "popo": "",
-        "doc": ""
-    },
-    {
-        "id": 61,
-        "name": "查查查",
-        "url": "http://cha.corp.youdao.com/",
-        "status": 0,
-        "desc": "广告",
-        "menu_id": 1,
-        "menu": "预留空值",
-        "class_id": 8,
-        "class_name": "测试服务",
-        "popo": "",
-        "doc": ""
-    }] 
-      }
-    },
-    serviceType: {
+    propType: {
       type: Array,
       // required: true,
-      default: () => {return    [
-        {
-        "id": 1,
-        "create_at": "2022-03-11T09:57:39+08:00",
-        "update_at": "2022-03-15T14:21:14+08:00",
-        "delete_at": null,
-        "index": 1,
-        "class_name": "基础设施"
-        },
-        {
-        "id": 2,
-        "create_at": "2022-03-11T09:57:58+08:00",
-        "update_at": "2022-03-15T14:21:26+08:00",
-        "delete_at": null,
-        "index": 2,
-        "class_name": "自动化与CI"
-        },
-        {
-        "id": 7,
-        "create_at": "2022-03-15T14:17:34+08:00",
-        "update_at": "2022-03-15T14:20:54+08:00",
-        "delete_at": null,
-        "index": 2,
-        "class_name": "资源与业务"
-        },
-        {
-        "id": 4,
-        "create_at": "2022-03-15T14:10:48+08:00",
-        "update_at": "2022-03-15T14:20:07+08:00",
-        "delete_at": null,
-        "index": 3,
-        "class_name": "数据与监控"
-        },
-        {
-        "id": 5,
-        "create_at": "2022-03-15T14:11:24+08:00",
-        "update_at": "2022-03-15T14:21:04+08:00",
-        "delete_at": null,
-        "index": 4,
-        "class_name": "运维服务"
-        },
-        {
-        "id": 8,
-        "create_at": "2022-03-23T20:51:18+08:00",
-        "update_at": "2022-03-23T21:23:55+08:00",
-        "delete_at": null,
-        "index": 5,
-        "class_name": "测试服务"
-        },
-        {
-        "id": 9,
-        "create_at": "2022-03-23T21:00:40+08:00",
-        "update_at": "2022-03-23T21:23:27+08:00",
-        "delete_at": null,
-        "index": 6,
-        "class_name": "测试工具"
-        },
-        {
-        "id": 6,
-        "create_at": "2022-03-15T14:11:35+08:00",
-        "update_at": "2022-03-15T14:20:36+08:00",
-        "delete_at": null,
-        "index": 7,
-        "class_name": "权限与安全"
-        },
-        {
-        "id": 10,
-        "create_at": "2022-03-23T21:16:03+08:00",
-        "update_at": "2022-03-23T21:23:39+08:00",
-        "delete_at": null,
-        "index": 8,
-        "class_name": "质量评估与报告"
-        },
-        {
-        "id": 3,
-        "create_at": "2022-03-15T14:10:10+08:00",
-        "update_at": "2022-03-15T14:20:16+08:00",
-        "delete_at": null,
-        "index": 9,
-        "class_name": "数据库与存储"
-        }
-    ]
-      }
+      default: () => { return [] }
     }
   },
   components:{
@@ -894,6 +122,8 @@ export default {
     return {
       // docSearch: '',
       // searchList: [],
+      serviceList: [],
+      serviceType: [],
       serviceOptions:[],
       list:[],
       popoHeight: 500,
@@ -905,7 +135,7 @@ export default {
     }
   },
   mounted () {
-    this.initData()
+    this.chargeList()
     this.popoverWidth(); // 组件初始化的时候不会触发onresize事件，这里强制执行一次
     window.onresize = () => {
       if(!this.timer){ // 使用节流机制，降低函数被触发的频率
@@ -923,26 +153,44 @@ export default {
 		window.onresize = null;
 	},
   created () {
-    this.chargeList()
-    // console.log(this.serviceList)
   },
   methods: {
-    initData() {
-      // var x = document.cookie;
-       const res =  fetch("https://cyan-dev.site.youdao.com/api/v1/service/serviceList", {
+    async initData() {
+      if(this.propList.length==0||this.propType.length==0){
+       const response1 = await fetch("https://cyan-dev.site.youdao.com/api/v1/open/serviceList", {
           method: 'GET', // *GET, POST, PUT, DELETE, etc.
           mode: 'cors', // no-cors, *cors, same-origin
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-          credentials: 'include', // include, *same-origin, omit
+          credentials: 'omit', // include, *same-origin, omit
           headers: {
             'Content-Type': 'application/json',
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
           redirect: 'follow', // manual, *follow, error
           referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-          body: undefined // body data type must match "Content-Type" header
-      });
-      console.log(res)
+          // body: undefined // body data type must match "Content-Type" header
+      })
+       const response2 = await fetch("https://cyan-dev.site.youdao.com/api/v1/open/serviceType", {
+          method: 'GET',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'omit',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+      })
+        this.serviceList = (await response1.json()).data
+        this.serviceType = (await response2.json()).data
+        if(!this.serviceList||!this.serviceType){
+          this.serviceList = []
+          this.serviceType = []
+        }
+      }else {
+        this.serviceList = this.propList
+        this.serviceType = this.propType
+      }
     },
     handleServiceSearch(value) {
       if(!value||value==''){
@@ -967,7 +215,8 @@ export default {
         this.serviceOptions = tmpList
       }
     },
-    chargeList() {
+    async chargeList() {
+      await this.initData()
       let tmpList = {}
       this.serviceType.forEach(item => {
         tmpList[item.class_name] = []
@@ -982,9 +231,9 @@ export default {
       let w = window.innerWidth;
       let h = window.innerHeight;
       if(h <= 500 && h > 20) {
-        this.popoHeight = h-20
+        this.popoHeight = h-60
       } else if(h > 500) {
-        this.popoHeight = 500
+        this.popoHeight = h*5/6 - 80
       } else {
         this.popoHeight = 0
       }if(w <= 1020) {// 1列
@@ -1007,9 +256,14 @@ export default {
         this.popCol1 = '25%'
         this.popWidth2 = 600
         this.popCol2 = '50%'
-      }  else {
-        this.popWidth1 = 1200
-        this.popCol1 = '25%'
+      } else if (w <= 2620) {// 5列
+        this.popWidth1 = (w - 2080)/2 + 1850
+        this.popCol1 = '20%'
+        this.popWidth2 = 600
+        this.popCol2 = '50%'
+      }   else {
+        this.popWidth1 = (w - 2620)/2 + 1850
+        this.popCol1 = '20%'
         this.popWidth2 = 600
         this.popCol2 = '50%'
       }
@@ -1105,7 +359,7 @@ export default {
     position: relative;
     width:var(--width1);
     height: var(--height);
-    padding: 1.25rem !important;
+    padding: 1rem !important;
     // overflow-y:auto;
     filter: drop-shadow(0px 2px 8px rgba(198, 198, 198, 0.5));
     /* box-shadow: 0px 2px 8px 0px rgba(198, 198, 198, 0.5); */
