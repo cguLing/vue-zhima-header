@@ -113,7 +113,7 @@ import AutoComplete from '@/components/autoComplete.vue'
 import Vue from 'vue'
 import VueMatomo from 'vue-matomo'
 Vue.use(VueMatomo, {
-  host: 'https://matomo.site.youdao.com/',
+  host: 'https://matomo.corp.youdao.com/',
   siteId: '3', // siteId值
   // 根据router自动注册,需要注意的是如果有路由传值值太长的话会matomo会监听不到并报414，就不能使用此方法了
   //  router: router,
