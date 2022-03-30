@@ -185,7 +185,7 @@ export default {
   methods: {
     async initData() {
       if(this.propList.length==0||this.propType.length==0){
-       const response1 = await fetch("https://cyan-dev.site.youdao.com/api/v1/open/serviceList", {
+       const response1 = await fetch("https://zhima.inner.youdao.com/api/v1/open/serviceList", {
           method: 'GET', // *GET, POST, PUT, DELETE, etc.
           mode: 'cors', // no-cors, *cors, same-origin
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -198,7 +198,7 @@ export default {
           referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
           // body: undefined // body data type must match "Content-Type" header
       })
-       const response2 = await fetch("https://cyan-dev.site.youdao.com/api/v1/open/serviceType", {
+       const response2 = await fetch("https://zhima.inner.youdao.com/api/v1/open/serviceType", {
           method: 'GET',
           mode: 'cors',
           cache: 'no-cache',
