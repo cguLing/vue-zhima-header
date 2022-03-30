@@ -1,6 +1,6 @@
 {
   "name": "vue-zhima-components",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "private": false,
   "main": "dist/zhima-header.umd.min.js",
   "scripts": {
@@ -30,6 +30,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "vue-matomo": "^4.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
