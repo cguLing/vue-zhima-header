@@ -1,6 +1,6 @@
 {
   "name": "vue-zhima-components",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "private": false,
   "main": "dist/zhima-header.umd.min.js",
   "scripts": {

@@ -332,6 +332,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.zhima-rt-a {
+  color: #000000;
+}
 .zhima-rt-a:hover {
   color: #2d8cf0;
 }
