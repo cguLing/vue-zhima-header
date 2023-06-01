@@ -304,8 +304,8 @@ export default {
             desc: ''
         });
       } else {
-        this.$matomo.trackEvent("点击链接", value.name, value.url)
         window.open(value.url, '_blank')
+        this.$matomo.trackEvent("点击链接", value.name, value.url)
       }
     },
     // handleSelectDoc (value) {
