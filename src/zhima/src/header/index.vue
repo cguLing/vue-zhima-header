@@ -1,7 +1,7 @@
 <template>
   <div class="zhima-header-bar">
     <transition name="sidebarLogoFade">
-      <a class="sidebar-logo-link" href="https://zhima.inner.youdao.com" target="_blank">
+      <a class="sidebar-logo-link" :href="logoLink" target="_blank">
       <svg width="35" height="35"
       viewBox="0 0 48 48" fill="none"
       style="margin:4px 4px 0 8px"
@@ -141,6 +141,10 @@ export default {
       type: Array,
       // required: true,
       default: () => { return [] }
+    },
+    logoLink: {
+      type:String,
+      default:'https://zhima.inner.youdao.com'
     }
   },
   components:{
