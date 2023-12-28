@@ -1,6 +1,6 @@
 {
   "name": "vue-zhima-components",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "private": false,
   "main": "dist/zhima-header.umd.min.js",
   "description": "zhima-header vue version",
@@ -13,11 +13,11 @@
     "pub": "npm run build:lib && npm publish --access public"
   },
   "publishConfig": {
-    "registry": "https://nexus3.corp.youdao.com/repository/npm-private/"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.corp.youdao.com/components1/vue-zhima-header.git"
+    "url": "https://github.com/cguLing/vue-zhima-header.git"
   },
   "dependencies": {
     "core-js": "^3.21.1",
