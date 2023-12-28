@@ -3,6 +3,7 @@
   "version": "1.3.0",
   "private": false,
   "main": "dist/zhima-header.umd.min.js",
+  "author": "cguling<1587765450@qq.com>",
   "description": "zhima-header vue version",
   "keywords": ["zhima"],
   "scripts": {
