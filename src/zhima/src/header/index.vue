@@ -28,7 +28,7 @@
         <img
           src="data:image/png;base64,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"
           class="sidebar-name2"> -->
-        <span v-if="!$slots.title">芝麻微服务</span>
+        <span v-if="!$slots.title">芝麻运维</span>
         <slot name="title"></slot>
       </span>
       </a>
@@ -112,24 +112,24 @@
 import './header-bar.less'
 import popover from '@/components/popover.vue'
 import AutoComplete from '@/components/autoComplete.vue'
-import Vue from 'vue'
-import VueMatomo from 'vue-matomo'
-Vue.use(VueMatomo, {
-  host: 'https://matomo.corp.youdao.com/',
-  siteId: '3', // siteId值
-  // 根据router自动注册,需要注意的是如果有路由传值值太长的话会matomo会监听不到并报414，就不能使用此方法了
-  //  router: router,
-  // 是否需要在发送追踪信息之前请求许可
-  // 默认false
-  requireConsent: false,
-  enableLinkTracking: true,
-  // 是否追踪初始页面
-  // 默认true
-  trackInitialView: false,
-  // 最终的追踪js文件名，因为我这边的matomo版本比较老，所以使用的是piwik，现在版本新的话此值应该为matomo
-  trackerFileName: 'matomo',
-  debug: true
-})
+// import Vue from 'vue'
+// import VueMatomo from 'vue-matomo'
+// Vue.use(VueMatomo, {
+//   host: 'https://matomo.corp.youdao.com/',
+//   siteId: '3', // siteId值
+//   // 根据router自动注册,需要注意的是如果有路由传值值太长的话会matomo会监听不到并报414，就不能使用此方法了
+//   //  router: router,
+//   // 是否需要在发送追踪信息之前请求许可
+//   // 默认false
+//   requireConsent: false,
+//   enableLinkTracking: true,
+//   // 是否追踪初始页面
+//   // 默认true
+//   trackInitialView: false,
+//   // 最终的追踪js文件名，因为我这边的matomo版本比较老，所以使用的是piwik，现在版本新的话此值应该为matomo
+//   trackerFileName: 'matomo',
+//   debug: true
+// })
 export default {
   name: 'zhimaHeader',
   props:{
@@ -310,7 +310,7 @@ export default {
         });
       } else {
         window.open(value.url, '_blank')
-        this.$matomo.trackEvent("点击链接", value.name, value.url)
+        // this.$matomo.trackEvent("点击链接", value.name, value.url)
       }
     },
     // handleSelectDoc (value) {
